@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Play Gift Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: auto;
+        }
+
+        .card img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .info {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .info span {
+            display: block;
+            color: green;
+            margin-top: 5px;
+        }
+
+        .code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
+        .card input[type="number"],
+        .card input[type="text"] {
+            width: 80px;
+            padding: 5px;
+            font-size: 16px;
+            text-align: center;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .card input[type="text"] {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png"
+            alt="Google Play Logo">
+        <h2>Google Play Gift Card</h2>
+        <div class="info">
+            Miktar: <input type="number" id="quantity" value="10" min="1">
+            <span>Birim Fiyat: $<input type="number" id="price" value="250" min="1"></span>
+        </div>
+        <div class="code">
+            <input type="text" id="code" value="A0W7LYP6W5">
+        </div>
+    </div>
+
+    <script>
+        // HTML'deki input alanlarına bağlan
+        const quantityInput = document.getElementById('quantity');
+        const priceInput = document.getElementById('price');
+        const codeInput = document.getElementById('code');
+
+        // İhtiyaç duyulan işlemler burada yapılabilir
+        quantityInput.addEventListener('input', function () {
+            console.log('Miktar değişti:', quantityInput.value);
+        });
+
+        priceInput.addEventListener('input', function () {
+            console.log('Fiyat değişti:', priceInput.value);
+        });
+
+        codeInput.addEventListener('input', function () {
+            console.log('Kod değişti:', codeInput.value);
+        });
+    </script>
+</body>
+
+</html>
